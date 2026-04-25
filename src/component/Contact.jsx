@@ -12,7 +12,8 @@ const Contact = () => {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const response = await axios.post("http://localhost:5000/api/contact", data);
+      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+      const response = await axios.post(`${apiUrl}/api/contact`, data);
 
       if (response.data.success) {
         setResult("✅ Success! Your message was sent via our API.");

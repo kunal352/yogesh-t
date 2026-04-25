@@ -1,0 +1,11 @@
+runtime: nodejs18
+env: standard
+
+env_variables:
+  PORT: "8080"
+  EMAIL_USER: "yogeshthorat612@gmail.com"
+  EMAIL_PASS: "your_app_password_here"
+
+handlers:
+- url: /.*
+  script: auto
